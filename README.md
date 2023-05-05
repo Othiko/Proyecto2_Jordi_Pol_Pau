@@ -1,1 +1,0 @@
-# Proyecto2_Jordi_Pol_Pau
