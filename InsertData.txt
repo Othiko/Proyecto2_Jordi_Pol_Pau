@@ -1,0 +1,28 @@
+/* ARMES: */
+
+INSERT INTO Armes (id_arma, nom_arma, velocitat_arma, forca_arma, huma, elf, nan) 
+VALUES (1, "Daga", 3, 0, "armes/daga.png", 10, 1, 1, 0);
+
+INSERT INTO Armes (id_arma, nom_arma, velocitat_arma, forca_arma, huma, elf, nan) 
+VALUES (2, "Espasa", 1, 1, "armes/espasa.png", 10, 1, 1, 1);
+
+INSERT INTO Armes (id_arma, nom_arma, velocitat_arma, forca_arma, huma, elf, nan) 
+VALUES (3, "Destral", 0, 3, "armes/destral.png", 10, 1, 0, 1);
+
+INSERT INTO Armes (id_arma, nom_arma, velocitat_arma, forca_arma, huma, elf, nan) 
+VALUES (4, "Espases dobles", 2, 2, "armes/espasesDobles.png", 14, 1, 1, 0);
+
+INSERT INTO Armes (id_arma, nom_arma, velocitat_arma, forca_arma, huma, elf, nan) 
+VALUES (5, "Simitarra", 2, 1, "armes/simitarra.png", 14, 1, 1, 0);
+
+INSERT INTO Armes (id_arma, nom_arma, velocitat_arma, forca_arma, huma, elf, nan) 
+VALUES (6, "Arc", 5, 1, "armes/arc.png", 15, 0, 1, 0);
+
+INSERT INTO Armes (id_arma, nom_arma, velocitat_arma, forca_arma, huma, elf, nan) 
+VALUES (7, "Katana", 3, 2, "armes/katana.png", 18, 1, 0, 0);
+
+INSERT INTO Armes (id_arma, nom_arma, velocitat_arma, forca_arma, huma, elf, nan) 
+VALUES (8, "Punyal", 4, 0, "armes/punyal.png", 12, 1, 1, 1);
+
+INSERT INTO Armes (id_arma, nom_arma, velocitat_arma, forca_arma, huma, elf, nan) 
+VALUES (9, "Destral de dues mans", 0, 5, "armes/destralDuesMans.png", 20, 0, 0, 1);
