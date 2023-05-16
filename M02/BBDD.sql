@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-05-2023 a las 21:00:13
+-- Tiempo de generación: 16-05-2023 a las 18:19:35
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `batallaraces`
 --
+CREATE DATABASE IF NOT EXISTS `batallaraces` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `batallaraces`;
 
 -- --------------------------------------------------------
 
@@ -62,7 +64,9 @@ CREATE TABLE `players` (
 INSERT INTO `players` (`player_id`, `player_name`, `player_password`, `player_global_points`, `player_enemies_defeated`, `player_damage_done`, `player_damage_taken`) VALUES
 (1, 'pau', 'admin', 0, 0, 0, 0),
 (2, 'pol', 'admin', 0, 0, 0, 0),
-(3, 'jordi', 'admin', 0, 0, 0, 0);
+(3, 'jordi', 'admin', 0, 0, 0, 0),
+(4, 'rigoberto', '1234', 0, 0, 0, 0),
+(5, 'hermenegildo', '1234', 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -86,8 +90,8 @@ CREATE TABLE `races` (
 --
 
 INSERT INTO `races` (`race_id`, `race_name`, `race_points`, `race_life`, `race_strenght`, `race_defense`, `race_agility`, `race_speed`) VALUES
-(1, 'Nan', 21, 60, 6, 4, 4, 3),
-(2, 'Huma', 20, 50, 5, 3, 6, 5),
+(1, 'Dwarf', 21, 60, 6, 4, 4, 3),
+(2, 'Human', 20, 50, 5, 3, 6, 5),
 (3, 'Elf', 19, 40, 4, 2, 7, 7);
 
 -- --------------------------------------------------------
@@ -108,15 +112,15 @@ CREATE TABLE `warriors` (
 --
 
 INSERT INTO `warriors` (`warrior_id`, `warrior_name`, `id_race`, `warrior_image_path`) VALUES
-(1, 'Bombur', 1, 'personatges/bombur.png'),
-(2, 'Fili', 1, 'personatges/fili.png'),
-(3, 'Kili', 1, 'personatges/kili.png'),
-(4, 'Faramir', 2, 'personatges/faramir.png'),
-(5, 'Boromir', 2, 'personatges/boromir.png'),
-(6, 'Elendil', 2, 'personatges/elendil.png'),
-(7, 'Thranduil', 3, 'personatges/thranduil.png'),
-(8, 'Legolas', 3, 'personatges/legolas.png'),
-(9, 'Elrond', 3, 'personatges/elrond.png');
+(1, 'Bombur', 1, 'characters/bombur.png'),
+(2, 'Fili', 1, 'characters/fili.png'),
+(3, 'Kili', 1, 'characters/kili.png'),
+(4, 'Faramir', 2, 'characters/faramir.png'),
+(5, 'Boromir', 2, 'characters/boromir.png'),
+(6, 'Elendil', 2, 'characters/elendil.png'),
+(7, 'Thranduil', 3, 'characters/thranduil.png'),
+(8, 'Legolas', 3, 'characters/legolas.png'),
+(9, 'Elrond', 3, 'characters/elrond.png');
 
 -- --------------------------------------------------------
 
@@ -138,15 +142,15 @@ CREATE TABLE `weapons` (
 --
 
 INSERT INTO `weapons` (`weapon_id`, `weapon_name`, `weapon_speed`, `weapon_strenght`, `weapon_image_path`, `weapon_points`) VALUES
-(1, 'Dagger', 3, 0, 'armes/daga.png', 10),
-(2, 'Sword', 1, 1, 'armes/espasa.png', 10),
-(3, 'Axe', 0, 3, 'armes/destral.png', 10),
-(4, 'Double Sword', 2, 2, 'armes/espasesDobles.png', 14),
-(5, 'Scimitar', 2, 1, 'armes/simitarra.png', 14),
-(6, 'Bow', 5, 1, 'armes/arc.png', 15),
-(7, 'Katana', 3, 2, 'armes/katana.png', 18),
-(8, 'Dirk', 4, 0, 'armes/punyal.png', 12),
-(9, 'Double Axe', 0, 5, 'armes/destralDuesMans.png', 20);
+(1, 'Dagger', 3, 0, 'weapons/dagger.png', 10),
+(2, 'Sword', 1, 1, 'weapons/sword.png', 10),
+(3, 'Axe', 0, 3, 'weapons/axe.png', 10),
+(4, 'Double Sword', 2, 2, 'weapons/doubleSwords.png', 14),
+(5, 'Scimitar', 2, 1, 'weapons/scimitar.png', 14),
+(6, 'Bow', 5, 1, 'weapons/bow.png', 15),
+(7, 'Katana', 3, 2, 'weapons/katana.png', 18),
+(8, 'Dirk', 4, 0, 'weapons/dirk.png', 12),
+(9, 'Double Axe', 0, 5, 'weapons/doubleAxe.png', 20);
 
 -- --------------------------------------------------------
 
@@ -179,8 +183,8 @@ INSERT INTO `weapons_available` (`id_race`, `id_weapon`) VALUES
 (3, 2),
 (3, 4),
 (3, 5),
-(2, 6),
-(2, 8);
+(3, 6),
+(3, 8);
 
 --
 -- Índices para tablas volcadas
@@ -235,10 +239,16 @@ ALTER TABLE `weapons_available`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `battle`
+--
+ALTER TABLE `battle`
+  MODIFY `battle_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `players`
 --
 ALTER TABLE `players`
-  MODIFY `player_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `player_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `races`
