@@ -29,7 +29,6 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `battle` (
   `battle_id` int(11) NOT NULL,
-  `round_id` int(11) NOT NULL,
   `id_player` int(11) NOT NULL,
   `id_warrior` int(11) NOT NULL,
   `warrior_weapon_id` int(11) NOT NULL,
