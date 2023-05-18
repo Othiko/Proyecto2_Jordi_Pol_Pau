@@ -32,6 +32,13 @@ VALUES ("Dirk", 4, 0, "armes/punyal.png", 12);
 INSERT INTO weapons (weapon_name, weapon_speed, weapon_strenght, weapon_image_path, weapon_points) 
 VALUES ("Double Axe", 0, 5, "armes/destralDuesMans.png", 20);
 
+insert into races (race_name,race_points,race_life,race_strenght,race_defense,race_agility,race_speed) 
+values("Nan",21,60,6,4,4,3);
+insert into races (race_name,race_points,race_life,race_strenght,race_defense,race_agility,race_speed) 
+values("Huma",20,50,5,3,6,5);
+insert into races (race_name,race_points,race_life,race_strenght,race_defense,race_agility,race_speed)
+values("Elf",19,40,4,2,7,7);
+
 insert into warriors (warrior_name,id_race,warrior_image_path)
 values("Bombur",1,"personatges/bombur.png"),
 ("Fili",1,"personatges/fili.png"),
@@ -46,13 +53,6 @@ insert into warriors (warrior_name,id_race,warrior_image_path)
 values("Thranduil",3,"personatges/thranduil.png"),
 ("Legolas",3,"personatges/legolas.png"),
 ("Elrond",3,"personatges/elrond.png");
-
-insert into races (race_name,race_points,race_life,race_strenght,race_defense,race_agility,race_speed) 
-values("Nan",21,60,6,4,4,3);
-insert into races (race_name,race_points,race_life,race_strenght,race_defense,race_agility,race_speed) 
-values("Huma",20,50,5,3,6,5);
-insert into races (race_name,race_points,race_life,race_strenght,race_defense,race_agility,race_speed)
-values("Elf",19,40,4,2,7,7);
 
 insert into weapons_available (id_race,id_weapon)
 values (1,2),(1,3),(1,8),(1,9);
