@@ -15,3 +15,11 @@ M03 - Instal·lació del Joc:
   4. Al menu de creació del nou projecte, desselecciona l'opció "Use default location". En fer-ho s'habilitarà la posibilitat d'importar el projecte des-de una carpeta. Per tant seleccionarem la carpeta que hem descomprimit anteriorment i crearem el projecte en base a aquesta.
   5. Darrere la creació del projecte, ens mourem al mateix. Desplegarem els continguts de la carpeta src i veurem dos elements: un paquet anomenat "InterfaceGrafica" i un arxiu java. Aquest últim ha de ser eliminat per el correcte funcionament del programa. 
   6. Després de la eliminació de l'arxiu el programa ja hi estarà disponible per fer-ne ús. Simplement s'ha d'executar l'arxius "main.java" que es troba dintre del paquet "InterfaceGrafica". Es important que abans de la iniciació del programa s'hagi realitzat la instal·lació de la Base de Dades explicada a l'inici d'aquest document. D'altre banda el joc no hi funcionarà. 
+
+
+M04 - Instal·lació dels scripts per realitzar la conversió de dades.
+  1. Descarrega el fitxer "M04.zip" de la carpeta M04 dintre de la branca main.
+  2. Descomprimeix l'arxiu zip i obre la carpeta "M04".
+  3. Abans de poder executar els scripts, hauràs d'instal·lar MySQL Connector per a Python des del terminal amb la comanda "pip install mysql-connector-python".
+  4. Finalment, per executar el codi correctament serà necessari que abans s'hagi realitzat la instal·lació de la Base de Dades explicada a l'inici del document.
+  5. Ara ja podràs executar els scripts correctament, primer el de "dataToXml.py" i després el de "xmlToHtml.py".
