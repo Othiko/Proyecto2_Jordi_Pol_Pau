@@ -21,7 +21,7 @@ create table races (
 );
 
 CREATE TABLE warriors (
-    warrior_id int null auto_increment,
+    warrior_id int not null auto_increment,
     warrior_name char(30),
     id_race int,
     constraint fk_idr_rid foreign key (id_race)
@@ -31,7 +31,7 @@ CREATE TABLE warriors (
 );
 
 CREATE TABLE weapons (
-    weapon_id int null auto_increment,
+    weapon_id int not null auto_increment,
     weapon_name char(30),
     weapon_speed int,
     weapon_strenght int,
@@ -51,7 +51,7 @@ CREATE TABLE weapons_available (
 
 
 CREATE TABLE players (
-	player_id int null auto_increment primary key,
+	player_id int not null auto_increment primary key,
     player_name char(30) not null unique,
     player_password char(30) not null,
     player_global_points int,
