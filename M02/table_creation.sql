@@ -61,7 +61,7 @@ CREATE TABLE players (
 );
 
 create table battle (
-	battle_id int not null primary key,
+	battle_id int not null auto_increment primary key,
 	id_player int not null,
     id_warrior int not null,
     warrior_weapon_id int not null,
