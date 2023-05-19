@@ -28,8 +28,7 @@ CREATE TABLE warriors (
     id_race int,
     constraint fk_idr_rid foreign key (id_race)
     references races(race_id),
-    warrior_image_path char(80),
-    PRIMARY KEY (warrior_id)
+    warrior_image_path char(80)
 );
 
 CREATE TABLE weapons (
@@ -38,8 +37,7 @@ CREATE TABLE weapons (
     weapon_speed int,
     weapon_strenght int,
     weapon_image_path char(80),
-    weapon_points int,
-    PRIMARY KEY (weapon_id)
+    weapon_points int
 );
 
 CREATE TABLE weapons_available (
